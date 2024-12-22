@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+<%= link_to "新規投稿", new_novel_path %>
+
+<h1>Novels</h1>
+<table>
+  <tr>
+<th>作品名</th>
+<th>作者名</th>
+<th>投稿日</th>
+<th>容量</th>
+<th>点数</th>
+  </tr>
+
+<tbody>
+  <% @novels.each do |novel| %>
+<tr>
+ <td><%= link_to novel.title, novel %></td>
+<td><%= novel.author %></td>
+<td><%= novel.created_at.strftime('%Y/%m/%d %H:%M:%S') %></td>
+<td><%= novel.novel_body.length.to_s + "文字" %></td>
+<td><%= novel.point %></td>
+<td><%= link_to "編集", edit_novel_path(novel) %></td>
+
+
+
+    </tr>
+  <% end %>
+</div>
+</tbody>
+</table>
+
+
+
+

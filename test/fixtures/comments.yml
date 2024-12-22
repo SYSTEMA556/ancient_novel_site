@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  novel_id: 1
+  body: MyText
+  reviewer_name: MyString
+  deleted: false
+
+two:
+  novel_id: 1
+  body: MyText
+  reviewer_name: MyString
+  deleted: false
