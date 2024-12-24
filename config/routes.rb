@@ -5,9 +5,10 @@ Rails.application.routes.draw do
       get :password_prompt
     end
   end
+  resources :comments
 
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
- get "/" => "novels#index"
+get "/" => "novels#index"
   # Defines the root path route ("/"
 end

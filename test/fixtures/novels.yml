@@ -1,21 +1,17 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: MyString
-  author: MyString
-  publish: 2024-12-18
-  password_digest: MyString
-  : MyString
-  novel_body: MyText
-  point: 1
-  novel_tags: MyString
+  title: "First Novel Title"
+  author: "Alice"
+  publish: "2024-12-18"
+  password_digest: <%= BCrypt::Password.create('password123') %>
+  novel_body: "This is the body of the first novel."
+  point: 10
+  novel_tags: "fantasy, adventure"
 
 two:
-  title: MyString
-  author: MyString
-  publish: 2024-12-18
-  password_digest: MyString
-  : MyString
-  novel_body: MyText
-  point: 1
-  novel_tags: MyString
+  title: "Second Novel Title"
+  author: "Bob"
+  publish: "2024-12-19"
+  password_digest: <%= BCrypt::Password.create('securepass456') %>
+  novel_body: "The second novel has a different story."
+  point: 5
+  novel_tags: "drama, romance"

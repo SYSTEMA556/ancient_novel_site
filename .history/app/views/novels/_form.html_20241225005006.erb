@@ -1,0 +1,46 @@
+<%= form_with(model: novel, local: true) do |f| %>
+  <% if novel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(novel.errors.count, "error") %> prohibited this novel from being saved:</h2>
+      <ul>
+        <% novel.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :author, "作者" %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div>
+    <%= f.label :publish, "公開状態" %>
+    <%= f.check_box :publish %>
+  </div>
+
+  <div>
+    <%= f.label :novel_body, "本文" %>
+    <%= f.text_area :novel_body %>
+  </div>
+
+  <div>
+    <%= f.label :password, "password123" %>
+    <%= f.password_field :password "password123" %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation, "パスワード（確認）" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= f.submit "保存" %>
+  </div>
+<% end %>

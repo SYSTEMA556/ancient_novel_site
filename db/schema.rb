@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_12_18_133620) do
+ActiveRecord::Schema[7.0].define(version: 2024_12_24_190712) do
   create_table "comments", force: :cascade do |t|
     t.integer "novel_id"
     t.text "body"
@@ -23,7 +23,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_18_133620) do
   create_table "novels", force: :cascade do |t|
     t.string "title"
     t.string "author"
-    t.date "publish"
     t.string "password_digest"
     t.text "novel_body"
     t.integer "point"
